@@ -9,3 +9,5 @@
 
 ### Note
 #### You are free to copy, reuse, update and learn from the code of this chrome extension. This tool is built for public service and also to spread awareness regarding Covid-19 Coronavirus.
+
+### [Chrome Webstore Link](https://chrome.google.com/webstore/detail/stay-safe-from-corona/nanplldfmpgkiogmopkfjcjcpjmaggld/related)
