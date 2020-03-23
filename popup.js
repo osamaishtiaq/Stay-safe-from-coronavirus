@@ -53,7 +53,7 @@ function updateStats() {
         }
         else {
             chrome.browserAction.setBadgeText({ "text": data.activeCases.replace(",", "").toString() });
-            chrome.browserAction.setBadgeBackgroundColor({ "color": "red" });
+            chrome.browserAction.setBadgeBackgroundColor({ "color": "#ff4810" });
         }
     });
 }
