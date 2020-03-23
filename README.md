@@ -1,2 +1,8 @@
-# Stay-safe-from-coronavirus
-A simple chrome extension that provides you with important information related to coronavirus around you.
+# Stay safe from Corono
+
+## A simple chrome extension that provides you with important information related to coronavirus around you.
+
+### Options
+1. Select Location manually or Allow the extension to get your location 
+2. Get Important statistics regarding corona near the selected location on timely basis
+3. Set the update time to either 1 minute, minutes, 10 minutes, 1 hour, 3 hour, 6 hours or daily.

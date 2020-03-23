@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <style>
+        .field-set {
+            width: auto;
+            padding: 20px;
+            font-size: 16px;
+
+        }
+
+        body {
+            font-family: "Roboto Condensed", "Roboto", monospace;
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        .heading {
+            font-size: 22px;
+            text-align: center;
+        }
+
+        #saveOptions {
+            padding: 5px;
+            font-size: 18px;
+            width: 140px;
+            color: white;
+            background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+            border: none;
+            cursor: pointer;
+            float: right;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Stay safe from Corona</h1>
+    <hr />
+    <main>
+        <fieldset class="field-set">
+            <p>Update Stats Every:</p>
+            <input type="radio" id="everyMinute" name="updateDuration" value="1">
+            <label for="everyMinute">Every Minute</label><br>
+            <input type="radio" id="every5" name="updateDuration" value="5">
+            <label for="every5">Every 5 Minutes</label><br>
+            <input type="radio" id="every15" name="updateDuration" value="15">
+            <label for="every15">Every 15 Minutes</label>
+            <input type="radio" id="every30" name="updateDuration" value="30">
+            <label for="every30">Every 30 Minutes</label>
+            <input type="radio" id="hourly" name="updateDuration" value="60">
+            <label for="hourly">Every Hour</label>
+        </fieldset>
+
+        <button id="saveOptions"> Save </button>
+    </main>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="option.js"></script>
+</body>
+
+</html>
