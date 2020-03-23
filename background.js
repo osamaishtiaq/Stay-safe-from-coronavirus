@@ -8,6 +8,10 @@ chrome.runtime.onInstalled.addListener(function () {
     console.log("Extention is installed. updateTimeInMinutes is set to 1");
   });
 
+});
+
+$(function() {
+  debugger
   SetupInterval();
 
   chrome.storage.onChanged.addListener(function (changes, storageName) {
@@ -20,6 +24,8 @@ chrome.runtime.onInstalled.addListener(function () {
 // Get Duration Time and run in that duration
 function SetupInterval() {
   chrome.storage.sync.get(['updateTimeInMinutes'], function (result) {
+    
+    if (!result.updateTimeInMinutes) return;
 
     // Run the first time
     fetchStats.FetchInfo();
