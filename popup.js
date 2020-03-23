@@ -24,7 +24,7 @@ function setPlaceHolderStats(location) {
         recovered: 'loading...',
         location: location
     };
-    chrome.storage.sync.set({ coronaStats: resultData }, function(){
+    chrome.storage.sync.set({ coronaStats: resultData }, function () {
         console.log("Temporary Location Set. Updating data");
     });
 }
@@ -42,20 +42,18 @@ function selectLocationInDDL() {
 function updateStats() {
     chrome.storage.sync.get(['coronaStats'], function (result) {
         let data = result.coronaStats;
-        $('#deaths').text(data.deaths);
-        $('#activeCases').text(data.activeCases);
-        $('#recovered').text(data.recovered);
+        $('#deaths').text(data.deaths == "" ? 0 : data.deaths);
+        $('#activeCases').text(data.activeCases == "" ? 0 : data.activeCases);
+        $('#recovered').text(data.recovered == "" ? 0 : data.recovered);
         $('#location').text(data.location);
 
-        $('#locationsDDL').val(data.location);
-
         if (data.activeCases == "loading...") {
-            chrome.browserAction.setBadgeText({"text": "..."});
-        chrome.browserAction.setBadgeBackgroundColor({"color": "green"});
+            chrome.browserAction.setBadgeText({ "text": "..." });
+            chrome.browserAction.setBadgeBackgroundColor({ "color": "green" });
         }
         else {
-            chrome.browserAction.setBadgeText({"text": data.activeCases.replace(",","").toString()});
-            chrome.browserAction.setBadgeBackgroundColor({"color": "red"});
+            chrome.browserAction.setBadgeText({ "text": data.activeCases.replace(",", "").toString() });
+            chrome.browserAction.setBadgeBackgroundColor({ "color": "red" });
         }
     });
 }
