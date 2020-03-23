@@ -20,6 +20,14 @@ main#container {
   width: 320px;
 }
 
+#recovered.value {
+  color: #8ACA2B;
+}
+
+#deaths.value {
+  color: #696969;
+}
+
 .title-value-section {
   width: auto;
   display: flex;
