@@ -25,6 +25,10 @@ main#container {
 }
 
 #deaths.value {
+  color: rgb(255, 112, 16);
+}
+
+#activeCases.value {
   color: #696969;
 }
 
