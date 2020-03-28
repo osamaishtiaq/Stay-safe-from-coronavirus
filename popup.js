@@ -47,12 +47,12 @@ function updateStats() {
         $('#recovered').text(data.recovered == "" ? 0 : data.recovered);
         $('#location').text(data.location);
 
-        if (data.activeCases == "loading...") {
+        if (data.recovered == "loading...") {
             chrome.browserAction.setBadgeText({ "text": "..." });
             chrome.browserAction.setBadgeBackgroundColor({ "color": "green" });
         }
         else {
-            chrome.browserAction.setBadgeText({ "text": data.activeCases.replace(",", "").toString() });
+            chrome.browserAction.setBadgeText({ "text": data.recovered.replace(",", "").toString() });
             chrome.browserAction.setBadgeBackgroundColor({ "color": "#ff4810" });
         }
     });

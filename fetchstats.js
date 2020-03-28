@@ -33,9 +33,9 @@ const fetchStats = {
         else {
             const tableRows = $(html).find('tr:contains(' + location + ')').first().text().trim().split('\n');
 
-            resultData.activeCases = tableRows[8].replace(/\s/g,'');
-            resultData.deaths = tableRows[3].replace(/\s/g,'');
-            resultData.recovered = tableRows[6].replace(/\s/g,'');
+            resultData.activeCases = tableRows[8].replace(/\s/g, '');
+            resultData.deaths = tableRows[3].replace(/\s/g, '');
+            resultData.recovered = tableRows[6].replace(/\s/g, '');
             resultData.location = location;
         }
 
