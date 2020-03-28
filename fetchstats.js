@@ -24,9 +24,9 @@ const fetchStats = {
 
         if (location == "Default") {
 
-            resultData.activeCases = $($(html).find('div.maincounter-number')[0]).text().trim();
+            resultData.activeCases = $($(html).find('div.maincounter-number')[2]).text().trim();
             resultData.deaths = $($(html).find('div.maincounter-number')[1]).text().trim();
-            resultData.recovered = $($(html).find('div.maincounter-number')[2]).text().trim();
+            resultData.recovered = $($(html).find('div.maincounter-number')[0]).text().trim();
             resultData.location = "Global";
 
         }

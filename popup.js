@@ -43,8 +43,8 @@ function updateStats() {
     chrome.storage.sync.get(['coronaStats'], function (result) {
         let data = result.coronaStats;
         $('#deaths').text(data.deaths == "" ? 0 : data.deaths);
-        $('#activeCases').text(data.activeCases == "" ? 0 : data.activeCases);
-        $('#recovered').text(data.recovered == "" ? 0 : data.recovered);
+        $('#activeCases').text(data.recovered == "" ? 0 : data.recovered);
+        $('#recovered').text(data.activeCases == "" ? 0 : data.activeCases);
         $('#location').text(data.location);
 
         if (data.recovered == "loading...") {
