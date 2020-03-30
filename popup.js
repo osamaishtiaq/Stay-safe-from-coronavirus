@@ -43,16 +43,16 @@ function updateStats() {
     chrome.storage.sync.get(['coronaStats'], function (result) {
         let data = result.coronaStats;
         $('#deaths').text(data.deaths == "" ? 0 : data.deaths);
-        $('#activeCases').text(data.activeCases == "" ? 0 : data.activeCases);
-        $('#recovered').text(data.recovered == "" ? 0 : data.recovered);
+        $('#activeCases').text(data.recovered == "" ? 0 : data.recovered);
+        $('#recovered').text(data.activeCases == "" ? 0 : data.activeCases);
         $('#location').text(data.location);
 
-        if (data.activeCases == "loading...") {
+        if (data.recovered == "loading...") {
             chrome.browserAction.setBadgeText({ "text": "..." });
             chrome.browserAction.setBadgeBackgroundColor({ "color": "green" });
         }
         else {
-            chrome.browserAction.setBadgeText({ "text": data.activeCases.replace(",", "").toString() });
+            chrome.browserAction.setBadgeText({ "text": data.recovered.replace(",", "").toString() });
             chrome.browserAction.setBadgeBackgroundColor({ "color": "#ff4810" });
         }
     });

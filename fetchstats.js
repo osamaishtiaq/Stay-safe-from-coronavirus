@@ -24,18 +24,18 @@ const fetchStats = {
 
         if (location == "Default") {
 
-            resultData.activeCases = $($(html).find('div.maincounter-number')[0]).text().trim();
+            resultData.activeCases = $($(html).find('div.maincounter-number')[2]).text().trim();
             resultData.deaths = $($(html).find('div.maincounter-number')[1]).text().trim();
-            resultData.recovered = $($(html).find('div.maincounter-number')[2]).text().trim();
+            resultData.recovered = $($(html).find('div.maincounter-number')[0]).text().trim();
             resultData.location = "Global";
 
         }
         else {
             const tableRows = $(html).find('tr:contains(' + location + ')').first().text().trim().split('\n');
 
-            resultData.activeCases = tableRows[8].replace(/\s/g,'');
-            resultData.deaths = tableRows[3].replace(/\s/g,'');
-            resultData.recovered = tableRows[6].replace(/\s/g,'');
+            resultData.activeCases = tableRows[8].replace(/\s/g, '');
+            resultData.deaths = tableRows[3].replace(/\s/g, '');
+            resultData.recovered = tableRows[6].replace(/\s/g, '');
             resultData.location = location;
         }
 
